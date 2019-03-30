@@ -395,3 +395,34 @@ console.log(persons2.getBirthDay1());
 console.log(persons2.getBirthMonth1());
 
 //DOM
+console.log(window);
+/* alert(1);
+window.alert(1); */
+
+//Single Element
+/* const form = document.getElementById('my-form');
+console.log(form); */
+console.log(document.getElementById("my-form"));
+console.log(document.querySelector("#my-form")); //querySelector works like jquery
+console.log(document.querySelector("h1"));
+console.log(document.querySelector(".container"));
+
+//Multiple Element
+/* console.log(document.querySelectorAll(".item")); //Node list
+console.log(document.getElementsByClassName("item")); //HTML collection can't use as array methods
+console.log(document.getElementsByTagName("li"));
+ */
+//Loop through
+const items = document.querySelectorAll(".item");
+items.forEach(i => console.log(i));
+
+const ul = document.querySelector(".users");
+console.log(ul);
+//ul.remove();
+//ul.lastElementChild.remove();
+ul.firstElementChild.textContent = "hello";
+ul.children[1].innerText = "priya";
+ul.lastElementChild.innerHTML = "<h4>welcome</h4>";
+
+const btn = document.querySelector(".btn");
+btn.style.background = "red";
