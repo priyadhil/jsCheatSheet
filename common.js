@@ -418,11 +418,25 @@ items.forEach(i => console.log(i));
 
 const ul = document.querySelector(".users");
 console.log(ul);
+
+const input = document.querySelector("#email");
+input.style.border = "2px solid orange";
+
+const btn = document.querySelector(".btn");
+btn.style.border = "2px solid orangered";
+btn.addEventListener("click", e => {
+  //can add any eventlisteners like mouseover, mouseout
+  e.preventDefault();
+  console.log(e);
+  console.log(e.target);
+  console.log(e.target.className);
+  document.querySelector("#my-form").style.background = "grey";
+  document.querySelector("body").classList.add("bg-color");
+  document.querySelector(".users").lastElementChild.innerHTML =
+    "<h1>Welcome Back</h1>";
+});
 //ul.remove();
 //ul.lastElementChild.remove();
 ul.firstElementChild.textContent = "hello";
 ul.children[1].innerText = "priya";
 ul.lastElementChild.innerHTML = "<h4>welcome</h4>";
-
-const btn = document.querySelector(".btn");
-btn.style.background = "red";

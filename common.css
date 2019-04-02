@@ -10,38 +10,54 @@ body {
 
 header {
   background: orange;
-  height: 6rem;
   color: #fff;
-  display: flex;
+  padding: 1rem;
   text-align: center;
-  justify-content: center;
 }
 
+.container {
+  width: 420px;
+  padding: 3rem 2rem;
+  margin: auto;
+  overflow: auto;
+}
 #my-form {
-  position: absolute;
-  top: 40%;
-  left: 45%;
-  height: 20rem;
-  width: 25rem;
-  transform: translate(-40%, -40%);
-  /* border: 1px solid orange; */
+  padding: 2rem;
   box-sizing: border-box;
   box-shadow: inset 3px -3px 4px 2px olive, 3px 3px 4px 2px orange;
 }
 
 #my-form h1 {
-  padding-top: 1rem;
-  display: flex;
   text-align: center;
-  justify-content: center;
-  height: 2rem;
 }
-#my-form div {
-  height: 3rem;
-  padding: 0 0 0 1rem;
-  font-size: 120%;
+
+#my-form label {
+  display: block;
 }
 #my-form input {
-  width: 250px;
-  padding: 0 0 0 0.2rem;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid orange;
+}
+.btn {
+  background: orange;
+  border: none;
+  color: #fff;
+  display: block;
+  padding: 10px 15px;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 3%;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  background: rgb(243, 159, 3);
+  margin: 5px 0;
+  color: #fff;
+}
+.bg-color {
+  background: #ccc;
 }
