@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  background: orange;
+  height: 6rem;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#my-form {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  height: 20rem;
+  width: 25rem;
+  transform: translate(-40%, -40%);
+  /* border: 1px solid orange; */
+  box-sizing: border-box;
+  box-shadow: inset 3px -3px 4px 2px olive, 3px 3px 4px 2px orange;
+}
+
+#my-form h1 {
+  padding-top: 1rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 2rem;
+}
+#my-form div {
+  height: 3rem;
+  padding: 0 0 0 1rem;
+  font-size: 120%;
+}
+#my-form input {
+  width: 250px;
+  padding: 0 0 0 0.2rem;
+}
