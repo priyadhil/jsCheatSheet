@@ -424,7 +424,7 @@ input.style.border = "2px solid orange";
 
 const btn = document.querySelector(".btn");
 btn.style.border = "2px solid orangered";
-btn.addEventListener("click", e => {
+/* btn.addEventListener("click", e => {
   //can add any eventlisteners like mouseover, mouseout
   e.preventDefault();
   console.log(e);
@@ -434,9 +434,56 @@ btn.addEventListener("click", e => {
   document.querySelector("body").classList.add("bg-color");
   document.querySelector(".users").lastElementChild.innerHTML =
     "<h1>Welcome Back</h1>";
-});
+}); */
 //ul.remove();
 //ul.lastElementChild.remove();
 ul.firstElementChild.textContent = "hello";
 ul.children[1].innerText = "priya";
 ul.lastElementChild.innerHTML = "<h4>welcome</h4>";
+
+const myForm = document.querySelector("#my-form");
+const msg = document.querySelector(".msg");
+const inputName = document.querySelector("#name");
+const inputEmail = document.querySelector("#email");
+const listUser = document.querySelector("#user");
+
+myForm.addEventListener("submit", onSubmit);
+
+function onSubmit(e) {
+  e.preventDefault();
+  //  console.log(inputName);
+  // console.log(inputName.value);
+  // console.log(inputEmail.value/);
+
+  if (inputName.value === " " || inputEmail.value === " ") {
+    //  alert('fill');
+    msg.classList.add("error");
+    msg.innerHTML = "please fill all the values";
+    msg.style.background = "red";
+
+    setTimeout(() => msg.remove(), 3000);
+  } else {
+    // console.log("success");
+    msg.classList.add("error");
+    msg.innerHTML = "success";
+    msg.style.background = "red";
+    const li = document.createElement("li");
+    ul.appendChild(
+      document.createTextNode(`${inputName.value} : ${inputEmail.value}`)
+    );
+    listUser.appendChild(li);
+
+    inputEmail.value = " ";
+    inputName.value = " ";
+    li.style.width = "100%";
+  }
+}
+/* myForm.addEventListener("submit", e => {
+  e.preventDefault();
+  // console.log(inputEmail);
+  // console.log(inputEmail.value);
+  if (inputName.value === null || inputEmail.value === null) {
+    alert("fill");
+    return false;
+  }
+}); */

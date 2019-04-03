@@ -31,7 +31,8 @@ header {
   text-align: center;
 }
 
-#my-form label {
+#my-form label,
+.msg {
   display: block;
 }
 #my-form input {
@@ -60,4 +61,8 @@ ul li {
 }
 .bg-color {
   background: #ccc;
+}
+.error {
+  padding: 5px;
+  margin: 5px;
 }
